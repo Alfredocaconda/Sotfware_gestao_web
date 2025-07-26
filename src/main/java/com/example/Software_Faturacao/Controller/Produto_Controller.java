@@ -40,7 +40,7 @@ public class Produto_Controller {
     public ResponseEntity<Produto> actualizar(@PathVariable Long id, @RequestBody Produto produtos){
         return servico.buscar_id(id).map(ProdutoExistente->{
             ProdutoExistente.setNome(produtos.getNome());
-            ProdutoExistente.setCategoria(produtos.getCategoria());
+            ProdutoExistente.setId_categoria(produtos.getId_categoria());
             ProdutoExistente.setDescricao(produtos.getDescricao());
             ProdutoExistente.setId_funcionario(produtos.getId_funcionario());
             Produto actualizado=servico.salvar_produto(ProdutoExistente);

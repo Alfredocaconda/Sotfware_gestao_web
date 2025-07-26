@@ -1,0 +1,59 @@
+package com.example.Software_Faturacao.Model;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Stock {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+    @ManyToOne
+    private Produto id_produto;
+    //relacionando a tabela funcionario com a tabela stock
+    @ManyToOne
+    private Funcionario id_funcionario;
+    private int quantidade;
+    private Date caducidade;
+    private Date data_entrada;
+    
+    public void setId_produto(Produto id_produto) {
+        this.id_produto = id_produto;
+    }
+    public Produto getId_produto() {
+        return id_produto;
+    }
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    public void setData_entrada(Date data_entrada) {
+        this.data_entrada = data_entrada;
+    }
+    public Date getData_entrada() {
+        return data_entrada;
+    }
+    public Date getCaducidade() {
+        return caducidade;
+    }
+    public void setCaducidade(Date caducidade) {
+        this.caducidade = caducidade;
+    }
+    public void setId_funcionario(Funcionario id_funcionario) {
+        this.id_funcionario = id_funcionario;
+    }
+    public Funcionario getId_funcionario() {
+        return id_funcionario;
+    }
+    
+    
+}

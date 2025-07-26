@@ -1,19 +1,19 @@
 package com.example.Software_Faturacao.Model;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
-public class Produto {
+@Table
+public class Categoria {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    @ManyToOne
-    private Categoria id_categoria;
-    private String descricao;
     @ManyToOne
     private Funcionario id_funcionario;
 
@@ -29,19 +29,6 @@ public class Produto {
     public String getNome() {
         return nome;
     }
-    public Categoria getId_categoria() {
-        return id_categoria;
-    }
-    public void setId_categoria(Categoria id_categoria) {
-        this.id_categoria = id_categoria;
-    }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-  
     public Funcionario getId_funcionario() {
         return id_funcionario;
     }
