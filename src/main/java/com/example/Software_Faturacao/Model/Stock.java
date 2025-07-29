@@ -16,7 +16,7 @@ public class Stock {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Produto id_produto;
+    private Produto produto;
     //relacionando a tabela funcionario com a tabela stock
     @ManyToOne
     private Funcionario id_funcionario;
@@ -24,11 +24,11 @@ public class Stock {
     private Date caducidade;
     private Date data_entrada;
     
-    public void setId_produto(Produto id_produto) {
-        this.id_produto = id_produto;
+    public Produto getProduto() {
+        return produto;
     }
-    public Produto getId_produto() {
-        return id_produto;
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
     public int getQuantidade() {
         return quantidade;
