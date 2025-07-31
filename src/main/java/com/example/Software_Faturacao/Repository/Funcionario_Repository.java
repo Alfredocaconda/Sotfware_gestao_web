@@ -8,5 +8,5 @@ import com.example.Software_Faturacao.Model.Funcionario;
 
 public interface Funcionario_Repository extends JpaRepository<Funcionario,Long> {
     Optional<Funcionario> findByNome(String nome);
-    
+    Optional<Funcionario> findByEmail(String email);    
 }

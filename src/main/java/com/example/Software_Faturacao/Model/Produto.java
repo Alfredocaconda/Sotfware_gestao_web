@@ -12,10 +12,10 @@ public class Produto {
     private Long id;
     private String nome;
     @ManyToOne
-    private Categoria id_categoria;
+    private Categoria categoria;
     private String descricao;
     @ManyToOne
-    private Funcionario id_funcionario;
+    private Funcionario funcionario;
 
     public Long getId() {
         return id;
@@ -29,24 +29,25 @@ public class Produto {
     public String getNome() {
         return nome;
     }
-    public Categoria getId_categoria() {
-        return id_categoria;
-    }
-    public void setId_categoria(Categoria id_categoria) {
-        this.id_categoria = id_categoria;
-    }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
     public String getDescricao() {
         return descricao;
     }
-  
-    public Funcionario getId_funcionario() {
-        return id_funcionario;
+    public void setFuncionario(Funcionario funcionario){
+        this.funcionario=funcionario;
     }
-    public void setId_funcionario(Funcionario id_funcionario) {
-        this.id_funcionario = id_funcionario;
+    public Funcionario getFuncionario(){
+        return funcionario;
     }
+    public Categoria getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(Categoria categoria) {
+        categoria = categoria;
+    }
+    
     
 }

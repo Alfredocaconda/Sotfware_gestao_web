@@ -34,7 +34,7 @@ public class Stock_Controller {
     public ResponseEntity<Stock> actualizar(@PathVariable Long id, @RequestBody Stock model){
         return servico.pesquisar_id(id).map(
                 Stock_Existente->{
-                Stock_Existente.setId_funcionario(model.getId_funcionario());
+                Stock_Existente.setFuncionario(model.getFuncionario());
                 Stock_Existente.setProduto(model.getProduto());
                 Stock_Existente.setCaducidade(model.getCaducidade());
                 Stock_Existente.setData_entrada(model.getData_entrada());

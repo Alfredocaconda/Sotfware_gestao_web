@@ -19,6 +19,22 @@ public class Funcionario {
     private int telefone;
     private String nascimento;
     private String genero;
+    private String cargo;
+    private String senha;
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    public String getSenha() {
+        return senha;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
     public Long getId() {
         return id;

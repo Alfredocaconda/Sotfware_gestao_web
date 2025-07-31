@@ -48,7 +48,7 @@ public class Categoria_Controller {
     public ResponseEntity<Categoria> actualizar(@PathVariable Long id,@RequestBody Categoria model){
         return servico.listar_id(id).map(Categoria_Existente->{
             Categoria_Existente.setNome(model.getNome());
-            Categoria_Existente.setId_funcionario(model.getId_funcionario());
+            Categoria_Existente.setFuncionario(model.getFuncionario());
             Categoria actualizado=servico.Salvar(Categoria_Existente);
             return ResponseEntity.ok(actualizado);
         }).orElse(ResponseEntity.notFound().build());

@@ -15,7 +15,7 @@ public class Categoria {
     private Long id;
     private String nome;
     @ManyToOne
-    private Funcionario id_funcionario;
+    private Funcionario funcionario;
 
     public Long getId() {
         return id;
@@ -29,11 +29,11 @@ public class Categoria {
     public String getNome() {
         return nome;
     }
-    public Funcionario getId_funcionario() {
-        return id_funcionario;
+    public Funcionario getFuncionario() {
+        return funcionario;
     }
-    public void setId_funcionario(Funcionario id_funcionario) {
-        this.id_funcionario = id_funcionario;
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
     
 }

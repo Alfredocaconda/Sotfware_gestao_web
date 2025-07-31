@@ -2,7 +2,6 @@ package com.example.Software_Faturacao.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
 
 import com.example.Software_Faturacao.Model.Funcionario;
@@ -13,8 +12,9 @@ public class Funcionario_Servico {
     private final Funcionario_Repository funcionario_repositorio;
 
     public Funcionario_Servico(Funcionario_Repository funcionario_repositorio){
-        this.funcionario_repositorio=funcionario_repositorio;
+        this.funcionario_repositorio = funcionario_repositorio;
     }
+    
     public Funcionario salvar(Funcionario modal ){
         return funcionario_repositorio.save(modal);
     }

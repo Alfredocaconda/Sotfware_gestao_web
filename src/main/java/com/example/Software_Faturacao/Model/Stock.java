@@ -19,7 +19,7 @@ public class Stock {
     private Produto produto;
     //relacionando a tabela funcionario com a tabela stock
     @ManyToOne
-    private Funcionario id_funcionario;
+    private Funcionario funcionario;
     private int quantidade;
     private Date caducidade;
     private Date data_entrada;
@@ -48,11 +48,11 @@ public class Stock {
     public void setCaducidade(Date caducidade) {
         this.caducidade = caducidade;
     }
-    public void setId_funcionario(Funcionario id_funcionario) {
-        this.id_funcionario = id_funcionario;
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
-    public Funcionario getId_funcionario() {
-        return id_funcionario;
+    public Funcionario getFuncionario() {
+        return funcionario;
     }
     
     
